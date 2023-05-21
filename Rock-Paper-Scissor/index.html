@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Rock Paper Scissor Game</title>
+        </head>
+        <body>
+                <div id="display"></div>
+                <div id="container">
+                        <div>
+                                <button id="scissor">
+                                        <img
+                                                src="./src/scissors.png"
+                                                alt="scissor hand sign"
+                                        />
+                                </button>
+                        </div>
+                        <div>
+                                <button id="paper">
+                                        <img
+                                                src="./src/paper.png"
+                                                alt="paper hand sign"
+                                        />
+                                </button>
+                        </div>
+                        <div>
+                                <button id="stone">
+                                        <img
+                                                src="./src/stone.png"
+                                                alt="stone hand sign"
+                                        />
+                                </button>
+                        </div>
+                </div>
+        </body>
+        <style>
+                #container {
+                        display: inline-flex;
+                        flex-direction: row;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        flex-wrap: nowrap;
+                        gap: 10px;
+                }
+                #display {
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                }
+                #container div img {
+                        height: 175;
+                        width: 175px;
+                }
+                #display p {
+                        font-size: 40px;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+                                sans-serif;
+                        font-style: normal;
+                        font: bold;
+                        font-weight: 500;
+                }
+        </style>
+        <script>
+                const display = document.querySelector("#display");
+                const paper = document.querySelector("#paper");
+                const scissor = document.querySelector("#scissor");
+                const stone = document.querySelector("#stone");
+
+                const gameRule = (playerChoice) => {
+                        display.innerHTML = ""
+                        //all choices
+                        const choices = ["stone", "paper", "scissor"];
+
+                        //random computer choices
+                        const computerChoice =
+                                choices[
+                                        Math.floor(
+                                                Math.random() * choices.length
+                                        )
+                                ];
+
+                        //show choices
+                        display.innerHTML +=
+                                "<p>" + `Your Choice: ${playerChoice}` + "</p>";
+                        display.innerHTML +=
+                                "<p>" +
+                                `Computer Choice: ${computerChoice}` +
+                                "</p>";
+
+                        //compare choices and output winner!
+                        if (playerChoice === computerChoice) {
+                                // console.log("It's a tie!");
+                                display.innerHTML +=
+                                        "<p>" + "Game Ties!" + "</p>";
+                        } else if (
+                                (playerChoice === "stone" &&
+                                        computerChoice === "scissor") ||
+                                (playerChoice === "paper" &&
+                                        computerChoice === "stone") ||
+                                (playerChoice === "scissor" &&
+                                        computerChoice === "paper")
+                        ) {
+                                display.innerHTML +=
+                                        "<p>" + "Player Wins!" + "</p>";
+                        } else {
+                                display.innerHTML +=
+                                        "<p>" + "Computer Wins!" + "</p>";
+                        }
+                };
+
+                paper.addEventListener("click", () => gameRule("paper"));
+
+                scissor.addEventListener("click", () => gameRule("scissor"));
+
+                stone.addEventListener("click", () => gameRule("stone"));
+        </script>
+</html>

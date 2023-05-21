@@ -1,0 +1,48 @@
+* {
+        padding: 0;
+        margin: 0;
+}
+body {
+        background-color: black;
+}
+#click {
+        border-radius: 20px;
+}
+.result {
+        position: absolute;
+        gap: 20px;
+        top: 19%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: bisque;   
+}
+.title {
+        position: absolute;
+        gap: 20px;
+        top: 13%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: bisque;
+}
+.container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.container .group {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+}
+.container .group .cell {
+        height: 150px;
+        width: 150px;
+        background-color: white;
+        border-radius: 20px;
+        border: 4px solid white;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Document</title>
+        </head>
+        <body>
+                <button id="add">Add</button>
+                <button id="sort">Sort</button>
+                <div id="container" class="inline"></div>
+                <script>
+                        const container = document.querySelector("#container");
+                        const addButton = document.querySelector("#add");
+                        const sortButton = document.querySelector("#sort");
+                        const arr = [];
+                        const randomNumber = () => {
+                                let randomNumber = Math.floor(
+                                        Math.random().toFixed(2) * 100
+                                );
+                                arr.push(randomNumber);
+                                return randomNumber;
+                        };
+
+                        addButton.addEventListener("click", () => showNumber());
+                        sortButton.addEventListener("click", () =>
+                                printNumber()
+                        );
+                        const showNumber = () => {
+                                randomNumber();
+                                container.innerHTML =
+                                        "<p>" + "Add Numbers:" + "</p>";
+                                arr.forEach(
+                                        (i) =>
+                                                (container.innerHTML +=
+                                                        "<p>" + i + "</p>")
+                                );
+                        };
+                        const printNumber = () => {
+                                container.innerHTML =
+                                        "<p>" + "Sorted Numbers:" + "</p>";
+                                arr.sort((a, b) => a - b).forEach(
+                                        (i) =>
+                                                (container.innerHTML +=
+                                                        "<p>" + i + "</p>")
+                                );
+                        };
+                </script>
+                <style>
+                        .inline {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                        }
+                        div p {
+                                padding: 10px;
+                                margin: 5px;
+                                background-color: brown;
+                        }
+                </style>
+        </body>
+</html>

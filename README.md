@@ -12,25 +12,25 @@ The Bubble Sort Visualizer project demonstrates the bubble sort algorithm visual
 
 ### Color Flipper
 
-![Color Flipper](images/color-flipper.png)
+![Color Flipper](./public/images/collor-flipper.png)
 
 The Color Flipper project generates random colors and displays them on the screen. You can click a button to change the background color to a randomly generated color. It's a fun way to explore different color combinations.
 
 ### Conway's Game of Life
 
-![Conway's Game of Life](images/game-of-life.png)
+![Conway's Game of Life](./public/images/conway's%20game%20of%20life.png)
 
 Conway's Game of Life is a cellular automaton simulation. The project implements the rules of the game, allowing you to watch patterns evolve and interact with the simulation. It's a fascinating example of emergent behavior in a simple system.
 
 ### Rock Paper Scissors
 
-![Rock Paper Scissors](images/rock-paper-scissors.png)
+![Rock Paper Scissors](./public/images/rock-paper-scissors-game-rules.png)
 
 The Rock Paper Scissors project lets you play the classic game against the computer. You can choose your move, and the computer will randomly select its move. The project determines the winner and displays the results.
 
 ### Tic Tac Toe
 
-![Tic Tac Toe](images/tic-tac-toe.png)
+![Tic Tac Toe](./public/images/Tic_tac_toe.svg.png)
 
 Tic Tac Toe is a two-player game where each player takes turns marking a grid with their symbol. The project provides an interactive board where you can play against a friend or against an AI opponent. Test your strategic skills and try to win!
 

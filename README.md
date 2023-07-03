@@ -6,7 +6,7 @@ Welcome to the JavaScript Projects Collection! This repository contains a collec
 
 ### Bubble Sort Visualizer
 
-![Bubble Sort Visualizer](/images/Bubble-sort-javascript.png)
+![Bubble Sort Visualizer](./public/images/Bubble-sort-javascript.png)
 
 The Bubble Sort Visualizer project demonstrates the bubble sort algorithm visually. It allows you to visualize how the bubble sort algorithm works by animating the sorting process step by step.
 
